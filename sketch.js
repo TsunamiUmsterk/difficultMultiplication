@@ -44,6 +44,10 @@ function draw() {
   text("Player Name: " + input.value(), 10, 250);
   textAlign(RIGHT);
   text("Enter your name please: ", 500, 20);
+
+  if(keyDown(13)) {
+    quiz();
+  }
   } else if(gameState === 2) {
     textSize(45);
   textFont('Optima');
@@ -61,6 +65,15 @@ function draw() {
   enter1.style("font-family: Optima; font-size: 25px; background-color: rgb(113, 240, 208);");
   enter1.style("border: 5px outset; border-radius: 40px;");
   enter1.mousePressed(quiz);
+
+  if(keyDown(32)) {
+    quiz();
+  }
+
+  if(keyDown(70)) {
+    gameState = 2;
+  }
+
   } else if(gameState === 3) {
     textSize(45);
     textFont('Optima');
@@ -78,6 +91,10 @@ function draw() {
   enter1.style("font-family: Optima; font-size: 25px; background-color: rgb(113, 240, 208);");
   enter1.style("border: 5px outset; border-radius: 40px;");
   enter1.mousePressed(quiz);
+
+  if(keyDown(32)) {
+    quiz();
+  }
   }
 
   drawSprites();
